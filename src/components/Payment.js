@@ -14,16 +14,22 @@ function Payment(props) {
 
     //  card validate
     const paymentSubmit = () => {
-        if
-            ((payment.cardNumber === "1001200130014001") || (payment.cardNumber === "1001 2001 3001 4001") &&
-            payment.year === "2023" &&
-            payment.cvv === "123" &&
-            payment.month === "march") {
-            alert("payment successful")
-        }
-        else {
-            alert("please check own card details")
-        }
+
+        if (props.totalPrice === 0) {
+            alert("Please add products first")
+        } else
+
+            if
+                ((payment.cardNumber === "1001200130014001") || (payment.cardNumber === "1001 2001 3001 4001") &&
+                payment.year === "2023" &&
+                payment.cvv === "123" &&
+                payment.month === "march") {
+                alert("payment successful")
+            }
+            else {
+                alert("please check own card details")
+            }
+
     }
 
 
